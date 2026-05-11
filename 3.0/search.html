@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Vehicles — NBCAR</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="search">
+  <div class="page-wrap">
+
+    <!-- ===== Primary Navigation ===== -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">NBCAR</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html" class="active">Search Vehicles</a></li>
+          <li><a href="seller.html">Seller Centre</a></li>
+        </ul>
+        <div class="nav-right" id="nav-user-status"></div>
+      </div>
+    </nav>
+
+    <!-- ===== Breadcrumb ===== -->
+    <div class="breadcrumb">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Search Vehicles</span>
+      </div>
+    </div>
+
+    <main class="page-main">
+      <div class="container">
+
+        <div class="page-header">
+          <h1>Search Vehicles</h1>
+          <p>Enter a model keyword or year to find matching used cars.</p>
+        </div>
+
+        <!-- Search form -->
+        <form id="search-form" novalidate style="max-width: 640px;">
+          <div class="search-row">
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="model">Model</label>
+              <input class="form-input" type="text" id="model" name="model" placeholder="e.g. Toyota, BMW, Tesla">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="year">Year</label>
+              <input class="form-input" type="number" id="year" name="year" placeholder="e.g. 2022" min="1990"
+                max="2026">
+            </div>
+
+            <div>
+              <!-- Spacer to align button with inputs -->
+              <div style="height: 19px;"></div>
+              <button type="submit" class="btn btn-primary" style="height: 40px; white-space: nowrap;">
+                Search
+              </button>
+            </div>
+
+          </div>
+
+          <p class="text-sm text-muted mt-8">
+            Both fields are optional. Fill in one or both, or leave blank to browse all vehicles.
+          </p>
+        </form>
+
+        <!-- Divider -->
+        <div style="border-top: 1px solid #E5E5E5; margin: 48px 0;"></div>
+
+        <!-- Quick links / browse hints -->
+        <div>
+          <p class="section-label mb-16">Popular Brands</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="results.html?model=Toyota" class="btn btn-secondary btn-sm">Toyota</a>
+            <a href="results.html?model=Honda" class="btn btn-secondary btn-sm">Honda</a>
+            <a href="results.html?model=Tesla" class="btn btn-secondary btn-sm">Tesla</a>
+            <a href="results.html?model=BMW" class="btn btn-secondary btn-sm">BMW</a>
+            <a href="results.html?model=Volkswagen" class="btn btn-secondary btn-sm">Volkswagen</a>
+            <a href="results.html?model=Mercedes-Benz" class="btn btn-secondary btn-sm">Mercedes-Benz</a>
+            <a href="results.html?model=Audi" class="btn btn-secondary btn-sm">Audi</a>
+            <a href="results.html" class="btn btn-secondary btn-sm">All Vehicles</a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-copy ph">© Delivery 3. All rights reserved.</span>
+        <ul class="footer-links">
+          <li><a href="seller.html">Seller Centre</a></li>
+          <li><a href="#" class="ph">[Contact Us]</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </div>
+  <script src="js/storage.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results — NBCAR</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="results">
+  <div class="page-wrap">
+
+    <!-- ===== Primary Navigation ===== -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">NBCAR</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html" class="active">Search Vehicles</a></li>
+          <li><a href="seller.html">Seller Centre</a></li>
+        </ul>
+        <div class="nav-right" id="nav-user-status"></div>
+      </div>
+    </nav>
+
+    <!-- ===== Breadcrumb ===== -->
+    <div class="breadcrumb">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="search.html">Search Vehicles</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Search Results</span>
+      </div>
+    </div>
+
+    <main class="page-main">
+      <div class="container">
+
+        <!-- ===== Refine search strip ===== -->
+        <div class="refine-strip">
+          <form id="refine-form" novalidate>
+            <div class="search-row" style="max-width: 640px;">
+
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="model">Model</label>
+                <input class="form-input" type="text" id="model" name="model" placeholder="e.g. Toyota">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="year">Year</label>
+                <input class="form-input" type="number" id="year" name="year" placeholder="e.g. 2022" min="1990"
+                  max="2026">
+              </div>
+
+              <div>
+                <div style="height: 19px;"></div>
+                <button type="submit" class="btn btn-secondary" style="height: 40px;">
+                  Refine Search
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <!-- ===== Results meta ===== -->
+        <div class="results-meta">
+          <h1 class="results-heading" id="results-heading">Search Results</h1>
+          <p class="results-count" id="results-count"></p>
+        </div>
+
+        <!-- ===== Car list (rendered by JS) ===== -->
+        <div id="car-list" class="car-list" style="padding-bottom: 80px;"></div>
+
+      </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-copy ph">© Delivery 3. All rights reserved.</span>
+        <ul class="footer-links">
+          <li><a href="search.html">Search Vehicles</a></li>
+          <li><a href="seller.html">Seller Centre</a></li>
+          <li><a href="#" class="ph">[Contact Us]</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </div>
+  <script src="js/storage.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
