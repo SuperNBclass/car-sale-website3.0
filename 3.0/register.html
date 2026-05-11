@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — NBCAR</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="register">
+  <div class="page-wrap">
+
+    <!-- ===== Primary Navigation ===== -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">NBCAR</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Search Vehicles</a></li>
+          <li><a href="seller.html" class="active">Seller Centre</a></li>
+        </ul>
+        <div class="nav-right" id="nav-user-status"></div>
+      </div>
+    </nav>
+
+    <!-- ===== Sub Navigation ===== -->
+    <div class="sub-nav">
+      <div class="sub-nav-inner">
+        <span class="sub-nav-label">Seller Centre</span>
+        <ul class="sub-nav-links">
+          <li><a href="register.html" class="active">Register</a></li>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="add-car.html">Add Vehicle</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===== Breadcrumb ===== -->
+    <div class="breadcrumb">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="seller.html">Seller Centre</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Register</span>
+      </div>
+    </div>
+
+    <main class="page-main">
+      <div class="container">
+        <div class="page-header">
+          <h1>Create Account</h1>
+          <p>Fill in the details below to create your seller account.</p>
+        </div>
+
+        <div class="form-wrap">
+
+          <!-- Flash message -->
+          <div id="flash" class="flash" role="alert"></div>
+
+          <form id="register-form" novalidate autocomplete="off">
+
+            <!-- 姓名 -->
+            <div class="form-group">
+              <label class="form-label" for="name">
+                Name
+                <span class="text-muted fw-400" style="font-weight:400"> (letters and spaces only)</span>
+              </label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="e.g. Zhang Wei"
+                autocomplete="off">
+              <span class="form-error" id="name-error"></span>
+            </div>
+
+            <!-- 地址 -->
+            <div class="form-group">
+              <label class="form-label" for="address">
+                Address
+                <span class="text-muted" style="font-weight:400"> (letters, numbers and spaces only)</span>
+              </label>
+              <input class="form-input" type="text" id="address" name="address"
+                placeholder="e.g. 123 Main Street Beijing" autocomplete="off">
+              <span class="form-error" id="address-error"></span>
+            </div>
+
+            <!-- 手机号 -->
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number</label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="1xxxxxxxxxx" autocomplete="off"
+                maxlength="11">
+              <span class="form-hint">Chinese mobile number, 11 digits, starting with 1</span>
+              <span class="form-error" id="phone-error"></span>
+            </div>
+
+            <!-- 邮箱 -->
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="name@example.com"
+                autocomplete="off">
+              <span class="form-hint">Must contain exactly one @ and end with .com or .cn</span>
+              <span class="form-error" id="email-error"></span>
+            </div>
+
+            <!-- 分隔线 -->
+            <div style="border-top: 1px solid #E5E5E5; margin: 28px 0;"></div>
+
+            <!-- 用户名 -->
+            <div class="form-group">
+              <label class="form-label" for="username">Username</label>
+              <input class="form-input" type="text" id="username" name="username" placeholder="At least 6 characters"
+                autocomplete="off">
+              <span class="form-hint">At least 6 alphanumeric characters, no special characters</span>
+              <span class="form-error" id="username-error"></span>
+            </div>
+
+            <!-- 密码 -->
+            <div class="form-group">
+              <label class="form-label" for="password">Password</label>
+              <input class="form-input" type="password" id="password" name="password"
+                placeholder="At least 6 characters" autocomplete="new-password">
+              <span class="form-hint">At least 6 alphanumeric characters, no special characters</span>
+              <span class="form-error" id="password-error"></span>
+            </div>
+
+            <div class="mt-32">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Create Account</button>
+            </div>
+
+            <p class="text-sm text-muted mt-16">
+              Already have an account? <a href="login.html">Log in</a>
+            </p>
+
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-copy ph">© Delivery 3. All rights reserved.</span>
+        <ul class="footer-links">
+          <li><a href="search.html">Search Vehicles</a></li>
+          <li><a href="#" class="ph">[Contact Us]</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </div>
+  <script src="js/storage.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
