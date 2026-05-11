@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Detail — Delivery 3</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="car-detail">
+  <div class="page-wrap">
+
+    <!-- ===== Primary Navigation ===== -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"></a>NBCAR</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html" class="active">Search Vehicles</a></li>
+          <li><a href="seller.html">Seller Centre</a></li>
+        </ul>
+        <div class="nav-right" id="nav-user-status"></div>
+      </div>
+    </nav>
+
+    <!-- ===== Breadcrumb ===== -->
+    <div class="breadcrumb">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="search.html">Search Vehicles</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="javascript:history.back()">Search Results</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current" id="bc-car">Vehicle Detail</span>
+      </div>
+    </div>
+
+    <main class="page-main">
+      <div class="container">
+        <div class="car-detail-section">
+          <!-- Content injected by JS -->
+          <div id="car-detail-container"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-copy ph">© 2026 Delivery 3. All rights reserved.</span>
+        <ul class="footer-links">
+          <li><a href="search.html">Search Vehicles</a></li>
+          <li><a href="seller.html">Seller Centre</a></li>
+          <li><a href="#" class="ph">[Contact Us]</a></li>
+        </ul>
+      </div>
+    </footer>
+
+  </div>
+  <script src="js/storage.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
