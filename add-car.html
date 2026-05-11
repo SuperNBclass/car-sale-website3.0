@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Vehicle — [Company Name]</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="add-car">
+<div class="page-wrap">
+
+  <!-- ===== Primary Navigation ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">[LOGO]</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="search.html">Search Vehicles</a></li>
+        <li><a href="seller.html" class="active">Seller Centre</a></li>
+      </ul>
+      <div class="nav-right" id="nav-user-status"></div>
+    </div>
+  </nav>
+
+  <!-- ===== Sub Navigation ===== -->
+  <div class="sub-nav">
+    <div class="sub-nav-inner">
+      <span class="sub-nav-label">Seller Centre</span>
+      <ul class="sub-nav-links">
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="add-car.html" class="active">Add Vehicle</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== Breadcrumb ===== -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="seller.html">Seller Centre</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Add Vehicle</span>
+    </div>
+  </div>
+
+  <main class="page-main">
+    <div class="container">
+      <div class="page-header">
+        <h1>Add Vehicle</h1>
+        <p>
+          Listed by: <strong id="seller-tag" style="font-weight:600;"></strong>
+        </p>
+      </div>
+
+      <div class="form-wrap">
+
+        <!-- Flash message -->
+        <div id="flash" class="flash" role="alert"></div>
+
+        <form id="add-car-form" novalidate>
+
+          <!-- 车型 -->
+          <div class="form-group">
+            <label class="form-label" for="model">Model</label>
+            <input
+              class="form-input"
+              type="text"
+              id="model"
+              name="model"
+              placeholder="e.g. Toyota Camry"
+            >
+            <span class="form-error" id="model-error"></span>
+          </div>
+
+          <!-- 年份 + 颜色（两列） -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+
+            <div class="form-group">
+              <label class="form-label" for="year">Year</label>
+              <input
+                class="form-input"
+                type="number"
+                id="year"
+                name="year"
+                placeholder="e.g. 2022"
+                min="1990"
+                max="2026"
+              >
+              <span class="form-error" id="year-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="color">Colour</label>
+              <input
+                class="form-input"
+                type="text"
+                id="color"
+                name="color"
+                placeholder="e.g. Pearl White"
+              >
+              <span class="form-error" id="color-error"></span>
+            </div>
+
+          </div>
+
+          <!-- 价格 -->
+          <div class="form-group">
+            <label class="form-label" for="price">Price (CNY)</label>
+            <input
+              class="form-input"
+              type="number"
+              id="price"
+              name="price"
+              placeholder="e.g. 180000"
+              min="1"
+            >
+            <span class="form-error" id="price-error"></span>
+          </div>
+
+          <!-- 所在地 -->
+          <div class="form-group">
+            <label class="form-label" for="location">Location</label>
+            <input
+              class="form-input"
+              type="text"
+              id="location"
+              name="location"
+              placeholder="e.g. Beijing"
+            >
+            <span class="form-error" id="location-error"></span>
+          </div>
+
+          <!-- 分隔线 -->
+          <div style="border-top: 1px solid #E5E5E5; margin: 28px 0;"></div>
+
+          <!-- 车辆图片 -->
+          <div class="form-group">
+            <label class="form-label" for="image">Vehicle Image</label>
+            <input
+              class="form-file"
+              type="file"
+              id="image"
+              name="image"
+              accept="image/*"
+            >
+            <span class="form-hint">Supports JPG, PNG, WEBP. Images are stored locally in your browser and are not uploaded to any server.</span>
+            <span class="form-error" id="image-error"></span>
+
+            <!-- Preview box -->
+            <div class="img-preview" id="img-preview">
+              <span class="ph">[Vehicle image preview]</span>
+            </div>
+          </div>
+
+          <div class="mt-32">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Publish Listing</button>
+          </div>
+
+          <p class="text-sm text-muted mt-16">
+            Your listing will appear in search results immediately.
+          </p>
+
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy ph">© 2026 [Company Name]. All rights reserved.</span>
+      <ul class="footer-links">
+        <li><a href="search.html">Search Vehicles</a></li>
+        <li><a href="#" class="ph">[Contact Us]</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</div>
+<script src="js/storage.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
